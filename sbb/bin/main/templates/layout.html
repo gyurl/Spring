@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+	<link rel="stylesheet" type="text/css" th:href="@{/bootstrap.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{/style.css}">
+	<title>Hello, SBB</title>
+</head>
+<body>
+	<!--네비게이션 바-->
+	<nav th:replace="~{navbar :: navbarFragment}"></nav>
+		<!--기본 템플릿 안에 삽입될 내용 start-->
+	<th:block layout:fragment="content"></th:block>
+	<!--기본 템플릿 안에 삽입될 내용 End-->
+	<!--bootstrap js-->
+	<script th:src="@{/bootstrap.min.js}"></script>
+	<!--자바스크립트 start-->
+	<th:block layout:fragment="script"></th:block>
+	<!--자바스크립트 end-->
+</body>
+</html>
